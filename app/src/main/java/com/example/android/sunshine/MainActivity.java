@@ -37,12 +37,14 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.forecastfragment, menu);
         return true;
     }
 
@@ -58,18 +60,24 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+/*        if(id == R.id.action_refresh){
+            return true;
+        }*/
+
+
         return super.onOptionsItemSelected(item);
     }
 
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
-        ArrayAdapter<String> adapter;
-        public PlaceholderFragment() {
-        }
+   // public static class PlaceholderFragment extends Fragment {
+       // ArrayAdapter<String> adapter;
+   //     public PlaceholderFragment() {
+   //     }
 
-        @Override
+/*
+    //    @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
 
@@ -83,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     "Sun-Sunny-88"
             };
             List<String> weekForecast= new ArrayList<String>(Arrays.asList(forecastArray));
-            adapter = new ArrayAdapter<String>(getActivity(),R.layout.list_item_forecast,
+            adapter = new ArrayAdapter<String>(getParent(),R.layout.list_item_forecast,
                     R.id.list_item_forecast_textview, weekForecast);
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
@@ -93,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
             return rootView;
         }
-    }
+*/
+  //  }
 
 }
